@@ -8,5 +8,5 @@ import java.io.Serializable;
 public class textObj implements Serializable {
     public int i = 0;
     public String[] word = new String[50];
-    public int random = 1;
+    public int random = 3;
 }

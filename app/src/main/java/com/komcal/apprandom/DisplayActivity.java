@@ -5,26 +5,37 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import java.util.Random;
 
-public class AddItemActivity extends ActionBarActivity {
 
+public class DisplayActivity extends ActionBarActivity {
 
-        textObj app = new textObj();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_item);
+        Intent intent = getIntent();
+        textObj app = (textObj) intent.getSerializableExtra("OBJ");
+        TextView showtext = new TextView(this);
+
+        showtext.setTextSize(30);
+        Random rand = new Random();
+        int n = rand.nextInt(app.i);
+        showtext.setText(app.word[n]);
+        setContentView(showtext);
+
+
+
+
+
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_add_item, menu);
+        getMenuInflater().inflate(R.menu.menu_display, menu);
         return true;
     }
 
@@ -41,25 +52,5 @@ public class AddItemActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
-    }
-    public void additem(View view){
-        EditText input = (EditText)findViewById(R.id.input);
-        String text = input.getText().toString();
-        LinearLayout linearLayout = (LinearLayout)findViewById(R.id.Itemlayout);
-        TextView textView = new TextView(this);
-
-        if(app.i==0) textView.setText(text);
-        else textView.setText(","+text);
-        textView.setTextSize(20);
-        linearLayout.addView(textView);
-        input.setText("");
-
-        app.word[app.i] = text;
-        app.i++;
-    }
-    public void changePage(View view){
-        Intent intent = new Intent(this,DisplayActivity.class);
-        intent.putExtra("OBJ",app);
-        startActivity(intent);
     }
 }
