@@ -4,10 +4,16 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 
 public class AddItemActivity extends ActionBarActivity {
 
+
+        textObj app = new textObj();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,5 +40,20 @@ public class AddItemActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+    public void additem(View view){
+        EditText input = (EditText)findViewById(R.id.input);
+        String text = input.getText().toString();
+        LinearLayout linearLayout = (LinearLayout)findViewById(R.id.Itemlayout);
+        TextView textView = new TextView(this);
+
+        if(app.i==0) textView.setText(text);
+        else textView.setText(","+text);
+        textView.setTextSize(20);
+        linearLayout.addView(textView);
+        input.setText("");
+
+        app.word[app.i] = text;
+        app.i++;
     }
 }
