@@ -18,17 +18,19 @@ public class DisplayActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         Intent intent = getIntent();
         textObj app = (textObj) intent.getSerializableExtra("OBJ");
-        TextView showtext = new TextView(this);
-
-        showtext.setTextSize(30);
         Random rand = new Random();
-        int n = rand.nextInt(app.i);
-        showtext.setText(app.word[n]);
+        int n = 0;
+        String p = "";
+        for(int i = 0 ; i < app.random ; i++){
+            n = rand.nextInt(app.i);
+            if(i==0) p += app.word[n];
+            else p += ("," + app.word[i]);
+        }
+
+        TextView showtext = new TextView(this);
+        showtext.setText(p);
+        showtext.setTextSize(30);
         setContentView(showtext);
-
-
-
-
 
     }
 

@@ -43,8 +43,10 @@ public class AddItemActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
     public void additem(View view){
+
         EditText input = (EditText)findViewById(R.id.input);
         String text = input.getText().toString();
+        if(text == "")return;
         LinearLayout linearLayout = (LinearLayout)findViewById(R.id.Itemlayout);
         TextView textView = new TextView(this);
 
