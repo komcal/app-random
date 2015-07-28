@@ -6,4 +6,12 @@
     <string name="head_text">Add your choice</string>
     <string name="random">Random!</string>
     <string name="title_activity_display">DisplayActivity</string>
+    <string-array name="random_num">
+
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
 </resources>
