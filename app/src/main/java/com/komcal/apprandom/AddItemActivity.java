@@ -16,14 +16,14 @@ import android.widget.TextView;
 
 public class AddItemActivity extends ActionBarActivity {
 
-
+        int check = 0;
         textObj app = new textObj();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_item);
 
-        Spinner mRandomSpinner = (Spinner) findViewById(R.id.spinner);
+        /*Spinner mRandomSpinner = (Spinner) findViewById(R.id.spinner);
         final String[] randnum = getResources().getStringArray(R.array.random_num);
         ArrayAdapter<String> adapterRandom = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,randnum);
         mRandomSpinner.setAdapter(adapterRandom);
@@ -38,7 +38,8 @@ public class AddItemActivity extends ActionBarActivity {
             public void onNothingSelected(AdapterView<?> parent) {
                 app.random = 0;
             }
-        });
+        });*/
+
     }
 
     public void additem(View view){
@@ -57,13 +58,33 @@ public class AddItemActivity extends ActionBarActivity {
 
         app.word[app.i] = text;
         app.i++;
+        check = 1;
     }
     public void changePage(View view){
-
+            if(app.random == 0 ||check == 0)return;
             Intent intent = new Intent(this,DisplayActivity.class);
             intent.putExtra("OBJ",app);
             startActivity(intent);
+    }
+    public void setrandom(View view){
+        switch(view.getId()){
+            case R.id.btn1:
+                app.random = 1;
+                break;
+            case R.id.btn2:
+                app.random = 2;
+                break;
+            case R.id.btn3:
+                app.random = 3;
+                break;
+            case R.id.btn4:
+                app.random = 4;
+                break;
 
+            case R.id.btn5:
+                app.random = 5;
+                break;
+        }
     }
 
 }
