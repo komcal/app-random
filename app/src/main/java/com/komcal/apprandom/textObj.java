@@ -9,4 +9,5 @@ public class textObj implements Serializable {
     public int i = 0;
     public String[] word = new String[50];
     public int random = 0;
+    public String text = "";
 }

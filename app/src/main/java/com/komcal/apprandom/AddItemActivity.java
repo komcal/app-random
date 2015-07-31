@@ -1,6 +1,8 @@
 package com.komcal.apprandom;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -8,9 +10,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.GridLayout;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
+import android.widget.TableLayout;
 import android.widget.TextView;
 
 
@@ -18,42 +23,27 @@ public class AddItemActivity extends ActionBarActivity {
 
         int check = 0;
         textObj app = new textObj();
+        Button btn1,btn2,btn3,btn4,btn5;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_item);
 
-        /*Spinner mRandomSpinner = (Spinner) findViewById(R.id.spinner);
-        final String[] randnum = getResources().getStringArray(R.array.random_num);
-        ArrayAdapter<String> adapterRandom = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,randnum);
-        mRandomSpinner.setAdapter(adapterRandom);
-
-        mRandomSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id){
-                if(randnum[position] != "random")
-                app.random = Integer.parseInt(randnum[position]);
-
-            }
-
-            public void onNothingSelected(AdapterView<?> parent) {
-                app.random = 0;
-            }
-        });*/
-
+        btn1 = (Button)findViewById(R.id.btn1);
+        btn2 = (Button)findViewById(R.id.btn2);
+        btn3 = (Button)findViewById(R.id.btn3);
+        btn4 = (Button)findViewById(R.id.btn4);
+        btn5 = (Button)findViewById(R.id.btn5);
     }
 
     public void additem(View view){
-
         EditText input = (EditText)findViewById(R.id.input);
         String text = input.getText().toString();
         if(text == "")return;
-        LinearLayout linearLayout = (LinearLayout)findViewById(R.id.Itemlayout);
-        TextView textView = new TextView(this);
-
-        if(app.i==0) textView.setText(text);
-        else textView.setText(","+text);
-        textView.setTextSize(20);
-        linearLayout.addView(textView);
+        if(app.i == 0)app.text += text;
+        else app.text += ("," + text);
+        TextView item = (TextView)findViewById(R.id.Item);
+        item.setText(app.text);
         input.setText("");
 
         app.word[app.i] = text;
@@ -70,21 +60,37 @@ public class AddItemActivity extends ActionBarActivity {
         switch(view.getId()){
             case R.id.btn1:
                 app.random = 1;
+                setwhite();
+                view.setBackgroundColor(Color.RED);
                 break;
             case R.id.btn2:
                 app.random = 2;
+                setwhite();
+                view.setBackgroundColor(Color.RED);
                 break;
             case R.id.btn3:
                 app.random = 3;
+                setwhite();
+                view.setBackgroundColor(Color.RED);
                 break;
             case R.id.btn4:
                 app.random = 4;
+                setwhite();
+                view.setBackgroundColor(Color.RED);
                 break;
 
             case R.id.btn5:
                 app.random = 5;
+                setwhite();
+                view.setBackgroundColor(Color.RED);
                 break;
         }
     }
-
+    public void setwhite(){
+        btn1.setBackgroundColor(Color.WHITE);
+        btn2.setBackgroundColor(Color.WHITE);
+        btn3.setBackgroundColor(Color.WHITE);
+        btn4.setBackgroundColor(Color.WHITE);
+        btn5.setBackgroundColor(Color.WHITE);
+    }
 }

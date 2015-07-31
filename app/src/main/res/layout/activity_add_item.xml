@@ -19,10 +19,10 @@
             android:layout_height="wrap_content"
             android:text="FOOD"
             android:id="@+id/textView"
-            android:textSize="50dp"
+            android:textSize="40dp"
             android:layout_marginStart="43dp"
             android:layout_alignParentTop="true"
-            android:layout_alignParentStart="true"
+            android:layout_alignParentStart="false"
             android:layout_marginLeft="30dp"
             android:textColor="#ff161340" />
 
@@ -31,7 +31,7 @@
             android:layout_height="wrap_content"
             android:text="RANDOM"
             android:id="@+id/textView2"
-            android:textSize="50dp"
+            android:textSize="40dp"
             android:layout_below="@+id/textView"
             android:layout_alignStart="@+id/textView"
             android:layout_marginTop="0dp"
@@ -51,7 +51,7 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="1"
             android:id="@+id/textView3"
-            android:textSize="60dp"
+            android:textSize="50dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentStart="true"
             android:layout_marginStart="43dp"
@@ -89,16 +89,8 @@
         android:id="@+id/Addbtn"
         android:onClick="additem"
         android:layout_below="@+id/menu1"
-        android:layout_alignParentEnd="true" />
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/Itemlayout"
-        android:layout_below="@+id/input"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="5dp"></LinearLayout>
+        android:layout_alignParentEnd="true"
+        android:background="#ffffff" />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -112,7 +104,7 @@
             android:layout_height="wrap_content"
             android:text="2"
             android:id="@+id/textView5"
-            android:textSize="60dp"
+            android:textSize="50dp"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:layout_alignParentTop="true"
@@ -144,43 +136,49 @@
         <Button
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="38dp"
             android:id="@+id/btn1"
             android:text="1"
             android:onClick="setrandom"
-            android:nestedScrollingEnabled="true" />
+            android:nestedScrollingEnabled="true"
+            android:background="#ffffff"
+            android:focusable="false" />
 
         <Button
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="38dp"
             android:text="2"
             android:id="@+id/btn2"
-            android:onClick="setrandom" />
+            android:onClick="setrandom"
+            android:background="#ffffff" />
 
         <Button
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="38dp"
             android:text="3"
             android:id="@+id/btn3"
-            android:onClick="setrandom" />
+            android:onClick="setrandom"
+            android:background="#ffffff" />
 
         <Button
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="37dp"
             android:text="4"
             android:id="@+id/btn4"
-            android:onClick="setrandom" />
+            android:onClick="setrandom"
+            android:background="#ffffff" />
 
         <Button
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="38dp"
             android:text="5"
             android:id="@+id/btn5"
-            android:onClick="setrandom" />
+            android:onClick="setrandom"
+            android:background="#ffffff" />
     </LinearLayout>
 
     <Button
@@ -192,5 +190,20 @@
         android:onClick="changePage"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/Item"
+        android:layout_below="@+id/input"
+        android:layout_alignParentStart="true"
+        android:background="#bdfffb"
+        android:textColor="#010101"
+        android:maxLines="3"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="15dp"
+        android:layout_above="@+id/menu2" />
 
 </RelativeLayout>
