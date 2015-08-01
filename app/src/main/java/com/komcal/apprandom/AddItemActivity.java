@@ -51,7 +51,7 @@ public class AddItemActivity extends ActionBarActivity {
         check = 1;
     }
     public void changePage(View view){
-            if(app.random == 0 ||check == 0)return;
+            if(app.random == 0 ||check == 0 || app.random > app.i )return;
             Intent intent = new Intent(this,DisplayActivity.class);
             intent.putExtra("OBJ",app);
             startActivity(intent);
