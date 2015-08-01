@@ -93,4 +93,19 @@ public class AddItemActivity extends ActionBarActivity {
         btn4.setBackgroundColor(Color.WHITE);
         btn5.setBackgroundColor(Color.WHITE);
     }
+    public void delitem(View view){
+        if(app.i == 0) return;
+        app.i--;
+        app.word[app.i] = "";
+        app.text = "";
+        for(int i = 0 ; i < app.i ; i++){
+            if(i == 0)app.text += app.word[i];
+            else app.text += ("," + app.word[i]);
+        }
+        TextView item = (TextView)findViewById(R.id.Item);
+        item.setText(app.text);
+        if(app.i == 0){
+            check = 0;
+        }
+    }
 }

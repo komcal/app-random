@@ -34,7 +34,7 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:id="@+id/item1"
             android:textSize="45dp"
-            android:layout_marginLeft="30dp" />
+            android:layout_marginLeft="33dp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -50,7 +50,7 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:id="@+id/item3"
             android:textSize="41dp"
-            android:layout_marginLeft="36dp" />
+            android:layout_marginLeft="33dp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -58,7 +58,7 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:id="@+id/item4"
             android:textSize="39dp"
-            android:layout_marginLeft="39dp" />
+            android:layout_marginLeft="33dp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -66,7 +66,7 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:id="@+id/item5"
             android:textSize="37dp"
-            android:layout_marginLeft="41dp" />
+            android:layout_marginLeft="33dp" />
     </LinearLayout>
 
 </RelativeLayout>
