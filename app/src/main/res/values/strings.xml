@@ -6,6 +6,7 @@
     <string name="head_text">Add your choice</string>
     <string name="random">Random!</string>
     <string name="title_activity_display">DisplayActivity</string>
+    <string name="que">\?</string>
     <string-array name="random_num">
 
         <item>1</item>

@@ -12,7 +12,7 @@
         android:id="@+id/header"
         android:background="#ff8efdff"
         android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true">
+        android:layout_alignParentStart="true">
 
         <TextView
             android:layout_width="wrap_content"
@@ -36,14 +36,53 @@
             android:layout_alignStart="@+id/textView"
             android:layout_marginTop="0dp"
             android:textColor="#ff161340" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/que"
+            android:id="@+id/textView8"
+            android:textSize="60dp"
+            android:textStyle="bold"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/textView2"
+            android:layout_marginLeft="10dp"
+            android:textColor="#ffd6fffd" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/que"
+            android:id="@+id/textView9"
+            android:textSize="60dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/textView8"
+            android:textColor="#ffd6fffd" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/que"
+            android:id="@+id/textView10"
+            android:textSize="60dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/textView9"
+            android:textColor="#ffd6fffd" />
     </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/menu1"
         android:layout_below="@+id/header"
-        android:layout_alignParentEnd="true"
-        android:id="@+id/menu1">
+        android:layout_alignParentStart="true">
 
         <TextView
             android:layout_width="wrap_content"
@@ -56,11 +95,12 @@
             android:layout_alignParentStart="true"
             android:layout_marginStart="43dp"
             android:layout_marginLeft="30dp"
-            android:paddingRight="10dp"
-            android:paddingLeft="10dp"
-            android:background="#ff917eff"
+            android:paddingRight="12dp"
+            android:paddingLeft="12dp"
+            android:background="@drawable/circle"
             android:textColor="#ffffffff"
-            android:layout_marginTop="5dp" />
+            android:layout_marginTop="5dp"
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -91,9 +131,9 @@
         android:id="@+id/Addbtn"
         android:onClick="additem"
         android:background="#ffffff"
-        android:layout_below="@+id/menu1"
         android:layout_alignEnd="@+id/btnlayout"
-        android:layout_marginRight="5dp" />
+        android:layout_marginRight="5dp"
+        android:layout_below="@+id/menu1" />
 
     <Button
         android:layout_width="wrap_content"
@@ -103,14 +143,16 @@
         android:layout_alignTop="@+id/Addbtn"
         android:layout_toEndOf="@+id/Addbtn"
         android:background="#e2dcda"
-        android:onClick="delitem" />
+        android:onClick="delitem"
+        android:layout_alignBottom="@+id/Addbtn" />
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/menu2"
         android:layout_above="@+id/btnlayout"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="5dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -118,13 +160,14 @@
             android:text="2"
             android:id="@+id/textView5"
             android:textSize="42dp"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentStart="true"
             android:layout_marginLeft="30dp"
-            android:background="#ff917eff"
-            android:textColor="#ffffffff"/>
+            android:background="@drawable/circle"
+            android:textColor="#ffffffff"
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -135,7 +178,7 @@
             android:layout_centerVertical="true"
             android:layout_toEndOf="@+id/textView5"
             android:layout_marginLeft="10dp"
-            android:textColor="#ff917eff"/>
+            android:textColor="#ff917eff" />
     </RelativeLayout>
 
     <LinearLayout
@@ -212,12 +255,13 @@
         android:id="@+id/Item"
         android:layout_below="@+id/input"
         android:layout_alignParentStart="true"
-        android:background="#bdfffb"
+        android:background="@drawable/border"
         android:textColor="#010101"
         android:maxLines="3"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
         android:paddingTop="15dp"
-        android:layout_above="@+id/menu2" />
+        android:layout_above="@+id/menu2"
+        android:layout_marginTop="5dp" />
 
 </RelativeLayout>

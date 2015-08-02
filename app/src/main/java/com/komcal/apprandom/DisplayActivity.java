@@ -55,11 +55,11 @@ public class DisplayActivity extends ActionBarActivity {
         TextView item3 = (TextView)findViewById(R.id.item3);
         TextView item4 = (TextView)findViewById(R.id.item4);
         TextView item5 = (TextView)findViewById(R.id.item5);
-        if(!wordrandom[0].equals("")) item1.setText("-" + wordrandom[0]);
-        if(!wordrandom[1].equals("")) item2.setText("-" + wordrandom[1]);
-        if(!wordrandom[2].equals("")) item3.setText("-" + wordrandom[2]);
-        if(!wordrandom[3].equals("")) item4.setText("-" + wordrandom[3]);
-        if(!wordrandom[4].equals("")) item5.setText("-" + wordrandom[4]);
+        if(!wordrandom[0].equals("")) item1.setText(wordrandom[0]);
+        if(!wordrandom[1].equals("")) item2.setText(wordrandom[1]);
+        if(!wordrandom[2].equals("")) item3.setText(wordrandom[2]);
+        if(!wordrandom[3].equals("")) item4.setText(wordrandom[3]);
+        if(!wordrandom[4].equals("")) item5.setText(wordrandom[4]);
 
     }
 }
